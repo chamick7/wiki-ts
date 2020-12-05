@@ -1,38 +1,109 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Texturina&display=swap');
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.body{
+  display: flex;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.input_form{
+  width: 50vw;
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.input_form img{
+  width: 80px;
+}
+
+
+.input_form div{
+  display: flex;
+  margin: 0 20px;
+  width: 100%;
+  border-bottom: 1px solid black;
+
+}
+
+.input_form div input{
+  width: 90%;
+  border: none;
+  outline: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  padding: 5px 15px;
+}
+
+.input_form div button{
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: .5s;
+  border-radius: 5px;
+}
+
+.input_form div button:hover{
+ background-color: aliceblue;
+}
+
+
+.list_body{
+  margin-top: 10vh;
+  width: 90%;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.list_item{
+  font-family: 'Roboto', sans-serif;
+  width: 90%;
+  border: 1px solid black;
+  margin: 2px 0;
+  transition: .5s;
+  background-color: rgb(71, 71, 71);
+}
+
+.list_item a{
+  text-decoration: none;
+}
+
+.list_item:nth-child(odd){
+  transform: skew(10deg);
+}
+.list_item:nth-child(even){
+  transform: skew(-10deg);
+}
+.list_item:hover{
+  transform: skew(0deg);
+}
+
+.list_item h2{
+  cursor: pointer;
+  padding: 0 5px;
+  font-family: 'Texturina', serif;
   color: white;
+  text-decoration: none;
+  transition: .5s;
+
 }
 
-.App-link {
-  color: #61dafb;
+.list_item h2:hover{
+  opacity: .8s;
+  color: rgb(182, 182, 182);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.list_item p {
+  font-family: 'Roboto', sans-serif;
+  text-indent: none;
+  padding: 5px 20px;
+  color: white;
 }
